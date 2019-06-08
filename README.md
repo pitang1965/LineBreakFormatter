@@ -1,0 +1,2 @@
+# LineBreakFormatter
+Google翻訳にかける文章を整形する簡単なJavaScriptを用いたページです。
