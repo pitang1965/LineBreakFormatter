@@ -7,24 +7,16 @@ const breakAtPeriod = document.getElementById("break-at-period");
 const convertLinebreakToSpace = document.getElementById("convert-linebreak-to-space");
 const breakAtLineheadUpperCharacter = document.getElementById("break-at-linehead-upper-character");
 
-inputText.addEventListener("input", function () {
-    formatText();
-});
+inputText.addEventListener("input", () => formatText());
 
-clear.addEventListener("click", function () {
+clear.addEventListener("click", () => {
     inputText.value ="";
     outputText.value ="";
 });
 
-breakAtPeriod.addEventListener("click", function () {
-    formatText();
-});
-convertLinebreakToSpace.addEventListener("click", function () {
-    formatText();
-});
-breakAtLineheadUpperCharacter.addEventListener("click", function () {
-    formatText();
-});
+breakAtPeriod.addEventListener("click", () => formatText());
+convertLinebreakToSpace.addEventListener("click", () => formatText());
+breakAtLineheadUpperCharacter.addEventListener("click", () => formatText());
 
 function formatText() {
     // UIの設定を見て、テキストを整形する 
@@ -75,7 +67,7 @@ function copyTextToClipboard(textVal) {
 const triangle_right = document.getElementById("help_triangle_right");
 const help = document.getElementById("help");
 
-triangle_right.addEventListener("click", function () {
+triangle_right.addEventListener("click", () => {
     console.log("triangle_right");
     triangle_right.classList.toggle("show-help");
     help.classList.toggle("display-none");
