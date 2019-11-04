@@ -1,5 +1,7 @@
 "use strict";
 
+const triangle_right = document.getElementById("help_triangle_right");
+const help = document.getElementById("help");
 const inputText = document.getElementById("input-text");
 const clear = document.getElementById("clear");
 const outputText = document.getElementById("output-text");
@@ -7,11 +9,21 @@ const breakAtPeriod = document.getElementById("break-at-period");
 const convertLinebreakToSpace = document.getElementById("convert-linebreak-to-space");
 const breakAtLineheadUpperCharacter = document.getElementById("break-at-linehead-upper-character");
 
+triangle_right.addEventListener("click", () => {
+    console.log("triangle_right");
+    triangle_right.classList.toggle("show-help");
+    help.classList.toggle("display-none");
+});
+
+
 inputText.addEventListener("input", () => formatText());
 
 clear.addEventListener("click", () => {
     inputText.value ="";
     outputText.value ="";
+    
+    // フォーカスをinputTextに戻す
+    inputText.focus();
 });
 
 breakAtPeriod.addEventListener("click", () => formatText());
@@ -62,15 +74,3 @@ function copyTextToClipboard(textVal) {
     // 処理結果を返却
     return retVal;
 }
-
-
-const triangle_right = document.getElementById("help_triangle_right");
-const help = document.getElementById("help");
-
-triangle_right.addEventListener("click", () => {
-    console.log("triangle_right");
-    triangle_right.classList.toggle("show-help");
-    help.classList.toggle("display-none");
-});
-
-
