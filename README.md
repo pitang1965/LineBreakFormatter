@@ -3,6 +3,7 @@ Google翻訳にかける文章を整形する簡単なJavaScriptを用いたペ�
 
 # DEMO
 https://software.pitang1965.com/LineBreakFormatter/
+![line-break-formatter](https://user-images.githubusercontent.com/47315420/93878201-a2c1bb00-fd14-11ea-9221-d4e9145d2765.gif)
 
 # Features
 Google翻訳など使う場合に、翻訳したいテキストの右端に改行が入っていると、それを取り除いてからGoogle翻訳にかけないとうまくいきませんが、その手作業を少しでも楽にしようというものです。
