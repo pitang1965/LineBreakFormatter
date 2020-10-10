@@ -1,38 +1,78 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head prefix="og: https://ogp.me/ns#">
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WNFCRF7');
+    </script>
+    <!-- End Google Tag Manager -->
 
-<head prefix="og: https://ogp.me/ns#">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <!-- OGP 一般設定 -->
-  <meta property="og:title" content="翻訳のための改行調整" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://software.pitang1965.com/LineBreakFormatter/" />
-  <meta property="og:image" content="https://software.pitang1965.com/LineBreakFormatter/assets/img/link-banner.jpg" />
-  <meta property="og:description" content="Google等での翻訳前に不要な改行を除去します。" />
+    <!-- OGP 一般設定 -->
+    <meta property="og:title" content="翻訳のための改行調整" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://software.pitang1965.com/LineBreakFormatter/"
+    />
+    <meta
+      property="og:image"
+      content="https://software.pitang1965.com/LineBreakFormatter/assets/img/link-banner.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Google等での翻訳前に不要な改行を除去します。"
+    />
 
-  <!-- OGP Twitter向け設定 -->
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:site" content="@pitang1965" />
-  <meta name="twitter:creator" content="@pitang1965" />
+    <!-- OGP Twitter向け設定 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@pitang1965" />
+    <meta name="twitter:creator" content="@pitang1965" />
 
-  <!-- OGP Facebookインサイト向け設定 -->
-  <meta property="fb:app_id" content="341893620195963" />  
+    <!-- OGP Facebookインサイト向け設定 -->
+    <meta property="fb:app_id" content="341893620195963" />
 
-  <title>翻訳のための改行調整</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="stylesheet" href="assets/css/triangles.css" />
-  <link rel="shortcut icon" href="https://software.pitang1965.com/wp-content/uploads/2019/01/cropped-log.jpeg"
-    type="image/x-icon"/>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-</head>
+    <title>翻訳のための改行調整</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/triangles.css" />
+    <link
+      rel="shortcut icon"
+      href="https://software.pitang1965.com/wp-content/uploads/2019/01/cropped-log.jpeg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
-  <header>
-    <h1>翻訳のための改行調整</h1>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WNFCRF7"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+      <h1>翻訳のための改行調整</h1>
       <div id="usage">
         <div id="usage-container">
           <div class="triangle-right" id="help_triangle_right"></div>
@@ -46,32 +86,67 @@
           </ol>
         </div>
       </div>
-  </header>
+    </header>
     <div id="text-areas-container">
       <div id="left-zone">
-        <textarea name="input-text" id="input-text" rows="20" cols="40" placeholder="英文をここに入力してください。"></textarea>
+        <textarea
+          name="input-text"
+          id="input-text"
+          rows="20"
+          cols="40"
+          placeholder="英文をここに入力してください。"
+        ></textarea>
         <div id="clear">
           <i class="fas fa-times"></i>
         </div>
       </div>
       <div id="right-zone">
-        <textarea name="output-text" readonly id="output-text" rows="20" cols="40"
-          placeholder="整形後のテキストがこちらに出力されます。"></textarea>
+        <textarea
+          name="output-text"
+          readonly
+          id="output-text"
+          rows="20"
+          cols="40"
+          placeholder="整形後のテキストがこちらに出力されます。"
+        ></textarea>
       </div>
     </div>
     <div id="controller">
-      <input type="checkbox" name="break-at-period" id="break-at-period" checked />
+      <input
+        type="checkbox"
+        name="break-at-period"
+        id="break-at-period"
+        checked
+      />
       <label for="break-at-period">ピリオドで改行する</label>
-      <input type="checkbox" name="break-at-period" id="convert-linebreak-to-space" unchecked />
-      <label for="convert-linebreak-to-space">不適切な改行をスペースに変換する</label>
-      <input type="checkbox" name="break-at-linehead-upper-character" id="break-at-linehead-upper-character" unchecked />
-      <label for="break-at-linehead-upper-character">行頭が大文字なら手前で無条件改行する</label>
+      <input
+        type="checkbox"
+        name="break-at-period"
+        id="convert-linebreak-to-space"
+        unchecked
+      />
+      <label for="convert-linebreak-to-space"
+        >不適切な改行をスペースに変換する</label
+      >
+      <input
+        type="checkbox"
+        name="break-at-linehead-upper-character"
+        id="break-at-linehead-upper-character"
+        unchecked
+      />
+      <label for="break-at-linehead-upper-character"
+        >行頭が大文字なら手前で無条件改行する</label
+      >
     </div>
-  <footer>
-    <iframe src="footer.html" width=800 height=200 frameborder="0"></iframe>
-  </footer>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/format-text.js"></script>
-</body>
-
+    <footer>
+      <iframe
+        src="footer.html"
+        width="800"
+        height="200"
+        frameborder="0"
+      ></iframe>
+    </footer>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/format-text.js"></script>
+  </body>
 </html>
