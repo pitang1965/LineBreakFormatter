@@ -11,7 +11,7 @@ Google翻訳など使う場合に、翻訳したいテキストの右端に改�
 # Requirement
 JavaScriptのみです。
 
-# Instration
+# Instllation
 特に何もなし。ローカルでも実行できます。
 
 # Usage
