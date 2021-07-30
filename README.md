@@ -1,5 +1,6 @@
 # LineBreakFormatter
-Google翻訳にかける文章を整形する簡単なJavaScriptを用いたページです。
+- Google翻訳にかける文章を整形する簡単なJavaScriptを用いたページです。
+- 2021-07-29: Vite (バニラTypeScript）で作り直しました。→ [こちら](https://github.com/pitang1965/vite-line-break-formatter)
 
 # DEMO
 https://software.pitang1965.com/LineBreakFormatter/
